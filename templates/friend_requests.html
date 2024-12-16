@@ -1,0 +1,14 @@
+<h2>Friend Requests</h2>
+<ul>
+    {% for request in requests %}
+        <li>
+            {{ request.sender.username }}
+            <form action="{{ url_for('accept_friend_request', request_id=request.id) }}" method="POST">
+                <button type="submit" class="btn btn-success">Accept</button>
+            </form>
+            <form action="{{ url_for('decline_friend_request', request_id=request.id) }}" method="POST">
+                <button type="submit" class="btn btn-danger">Decline</button>
+            </form>
+        </li>
+    {% endfor %}
+</ul>

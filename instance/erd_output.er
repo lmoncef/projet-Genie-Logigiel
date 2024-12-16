@@ -1,0 +1,12 @@
+[alembic_version]
+    *version_num {label:"VARCHAR(32)"}
+[post]
+    *id {label:"INTEGER"}
+    content {label:"TEXT"}
+    timestamp {label:"DATETIME"}
+    user_id {label:"INTEGER"}
+[user]
+    *id {label:"INTEGER"}
+    password {label:"VARCHAR(100)"}
+    username {label:"VARCHAR(100)"}
+user."id" 1--* post."user_id"

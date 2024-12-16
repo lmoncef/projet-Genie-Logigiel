@@ -1,0 +1,16 @@
+
+      graph {
+         graph [rankdir=LR];
+         node [label="\N",
+             shape=plaintext
+         ];
+         edge [color=gray50,
+             minlen=2,
+             style=dashed
+         ];
+      
+"alembic_version" [label=<<FONT FACE="Helvetica"><TABLE BORDER="0" CELLBORDER="1" CELLPADDING="4" CELLSPACING="0"><TR><TD><B><FONT POINT-SIZE="16">alembic_version</FONT></B></TD></TR><TR><TD ALIGN="LEFT" PORT="version_num"><u><FONT>version_num</FONT></u> <FONT> [VARCHAR(32)]</FONT> NOT NULL</TD></TR></TABLE></FONT>>];
+"post" [label=<<FONT FACE="Helvetica"><TABLE BORDER="0" CELLBORDER="1" CELLPADDING="4" CELLSPACING="0"><TR><TD><B><FONT POINT-SIZE="16">post</FONT></B></TD></TR><TR><TD ALIGN="LEFT" PORT="id"><u><FONT>id</FONT></u> <FONT> [INTEGER]</FONT> NOT NULL</TD></TR><TR><TD ALIGN="LEFT" PORT="content"><FONT>content</FONT> <FONT> [TEXT]</FONT> NOT NULL</TD></TR><TR><TD ALIGN="LEFT" PORT="timestamp"><FONT>timestamp</FONT> <FONT> [DATETIME]</FONT></TD></TR><TR><TD ALIGN="LEFT" PORT="user_id"><FONT>user_id</FONT> <FONT> [INTEGER]</FONT> NOT NULL</TD></TR></TABLE></FONT>>];
+"user" [label=<<FONT FACE="Helvetica"><TABLE BORDER="0" CELLBORDER="1" CELLPADDING="4" CELLSPACING="0"><TR><TD><B><FONT POINT-SIZE="16">user</FONT></B></TD></TR><TR><TD ALIGN="LEFT" PORT="id"><u><FONT>id</FONT></u> <FONT> [INTEGER]</FONT> NOT NULL</TD></TR><TR><TD ALIGN="LEFT" PORT="password"><FONT>password</FONT> <FONT> [VARCHAR(100)]</FONT> NOT NULL</TD></TR><TR><TD ALIGN="LEFT" PORT="username"><FONT>username</FONT> <FONT> [VARCHAR(100)]</FONT> NOT NULL</TD></TR></TABLE></FONT>>];
+"user":"id" -- "post":"user_id" [taillabel=<<FONT>1</FONT>>,headlabel=<<FONT>0..N</FONT>>];
+}
